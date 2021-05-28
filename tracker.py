@@ -20,7 +20,7 @@ def rss_checker():
     for message in rss_feed.entries:
         # Pak datum uit titel als
         # "(...) 19XX uitgenodigd voor coronavaccinatie"
-        regex = re.findall(r"(\b19[0-9]{2}\b)(?=\suitgenodigd)", message.title)
+        regex = re.findall(r"(\b19[0-9]{2})(?=\suitgenodigd)", message.title)
 
         if len(regex) > 0:
             # Alleen eerste resultaat nodig
