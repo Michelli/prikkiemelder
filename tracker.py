@@ -30,5 +30,5 @@ def rss_checker():
             update_year(rss_year)
             break
 
-rss_checker()
-
+if __name__ == '__main__':
+    rss_checker()
