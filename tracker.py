@@ -26,5 +26,4 @@ def rss_checker():
             break
 
 if __name__ == '__main__':
-    # rss_checker()
-    test()
+    rss_checker()
