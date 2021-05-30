@@ -8,6 +8,8 @@ Het is een simpel script dat de RSS feed van het RIVM uitleest. Tot nu toe gebru
 
 Vul de gegevens van je MQTT server in in een .env file. Er staat een voorbeeld in deze repo.
 
+Zelf heb ik een cronjob aangemaakt die het script iedere 5 minuten afvuurt.
+
 ## Takenlijst
 
 - [ ] TLS ondersteuning
