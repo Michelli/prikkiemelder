@@ -20,15 +20,11 @@ def rss_checker():
     for message in rss_feed.entries:
         # Pak datum uit titel als
         # "(...) 19XX uitgenodigd voor coronavaccinatie"
-        regex = re.findall(r"((\b19[0-9]{2})|(\b200[0-9]))(?=\suitgenodigd)", message.title)
-
-        if len(regex) > 0:
-            # Alleen eerste resultaat nodig
-            rss_year = int(regex[0])
-
-            # Update met laatste waarde en stop
-            update_year(rss_year)
+        match = re.search(r"((\b19[0-9]{2})|(\b200[0-9]))(?=\suitgenodigd)", message.title)
+        if match:
+            update_year(match.group())
             break
 
 if __name__ == '__main__':
-    rss_checker()
+    # rss_checker()
+    test()
